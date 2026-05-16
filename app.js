@@ -302,37 +302,71 @@
 // ○ age 5 dan kichik bo‘lsa "Invalid age"
 // ○ score 0..100 oralig‘ida bo‘lmasa "Invalid score"
 
+// let students = [
+//     { id: 1, name: "Ali", age: 20, score: 85 },
+//     { id: 2, name: "Vali", age: 18, score: 70 },
+//     { id: 3, name: "Guli", age: 22, score: 60 }
+// ];
+
+// function updateStudent(id, data) {
+//     for (let i = 0; i < students.length; i++) {
+//         if (students[i].id === id) {
+
+//             if (data.name !== undefined) {
+//                 if (data.name === "") return "Invalid name";
+//                 students[i].name = data.name;
+//             }
+
+//             if (data.age !== undefined) {
+//                 if (data.age < 5) return "Invalid age";
+//                 students[i].age = data.age;
+//             }
+
+//             if (data.score !== undefined) {
+//                 if (data.score < 0 || data.score > 100) return "Invalid score";
+//                 students[i].score = data.score;
+//             }
+
+//             return students[i];
+//         }
+//     }
+//     return "Student not found";
+// }
+
+// console.log(updateStudent(1, { name: "Sardor" })); 
+// console.log(updateStudent(2, { score: 95 }));     
+// console.log(updateStudent(3, { age: 10 }));        
+
+
+// ============================================================================================================================
+
+// 6.4) DELETE — deleteStudent(id)
+// Vazifa:
+// id bo‘yicha studentni o‘chiring.
+// Shartlar:
+// ● agar topilsa, arraydan o‘chirib, o‘chirilgan studentni return qiling
+// ● topilmasa null qaytaring
+
+
 let students = [
     { id: 1, name: "Ali", age: 20, score: 85 },
     { id: 2, name: "Vali", age: 18, score: 70 },
     { id: 3, name: "Guli", age: 22, score: 60 }
 ];
 
-function updateStudent(id, data) {
+function deleteStudent(id) {
     for (let i = 0; i < students.length; i++) {
         if (students[i].id === id) {
-
-            if (data.name !== undefined) {
-                if (data.name === "") return "Invalid name";
-                students[i].name = data.name;
-            }
-
-            if (data.age !== undefined) {
-                if (data.age < 5) return "Invalid age";
-                students[i].age = data.age;
-            }
-
-            if (data.score !== undefined) {
-                if (data.score < 0 || data.score > 100) return "Invalid score";
-                students[i].score = data.score;
-            }
-
-            return students[i];
+            let deleted = students[i];
+            students.splice(i, 1);
+            return deleted;
         }
     }
-    return "Student not found";
+    return null;
 }
 
-console.log(updateStudent(1, { name: "Sardor" })); 
-console.log(updateStudent(2, { score: 95 }));     
-console.log(updateStudent(3, { age: 10 }));        
+console.log(deleteStudent(2));  
+console.log(students);          
+console.log(deleteStudent(99)); 
+
+
