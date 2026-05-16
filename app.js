@@ -240,3 +240,53 @@
 
 // ===================================================================================================================
 
+
+// 6.1) CREATE — createStudent(name, age, score)
+// Vazifa:
+// Yangi student qo‘shing.
+// Shartlar:
+// ● name bo‘sh bo‘lmasin (bo‘sh bo‘lsa "Invalid name" qaytaring).
+// ● age 5 dan kichik bo‘lmasin (kichik bo‘lsa "Invalid age" qaytaring).
+// // ● score 0..100 oralig‘ida bo‘lsin (aks holda "Invalid score" qaytaring).
+// // ● id avtomatik berilsin:
+// // ○ array bo‘sh bo‘lsa id = 1
+// // ○ aks holda oxirgi element id + 1
+// // ● yangi student objectni arrayga qo‘shing va o‘sha objectni return qiling.
+
+
+// let students = [];
+
+// function createStudent(name, age, score) {
+
+//     if (name === "" || name === undefined) {
+//         return "Invalid name";
+//     }
+
+//     if (age < 5) {
+//         return "Invalid age";
+//     }
+
+//     if (score < 0 || score > 100) {
+//         return "Invalid score";
+//     }
+
+//     const id =
+//         students.length === 0
+//             ? 1
+//             : students[students.length - 1].id + 1;
+
+//     const student = {
+//         id: id,
+//         name: name,
+//         age: age,
+//         score: score
+//     };
+
+//     students.push(student);
+
+//     return student;
+// }
+
+// console.log(createStudent("Ali", 15, 90));
+// console.log(createStudent("Vali", 14, 80));
+// console.log(students);
