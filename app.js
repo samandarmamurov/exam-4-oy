@@ -9,10 +9,6 @@
 // console.log(sumTo(0));
 // console.log(sumTo(-10));
 
-
-
-
-
 //========================================================================================================
 
 // 2) isPrime(n) — tub son tekshirish
@@ -31,30 +27,24 @@
 // ● isPrime(4) → false● isPrime(1) → false
 // ● isPrime(17) → true
 
+// function isPrime (n){
+//     if  (n<= 1) {
+//         return false
 
+//     }
+//     for ( let i = 2; i*i <= n; i++ ){
+//         if ( n % i ===0 ){
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(isPrime(2));
+// console.log(isPrime(3));
+// console.log(isPrime(4));
+// console.log(isPrime(17));
 
-
-
-    // function isPrime (n){
-    //     if  (n<= 1) {
-    //         return false
-            
-    //     }
-    //     for ( let i = 2; i*i <= n; i++ ){
-    //         if ( n % i ===0 ){
-    //             return false
-    //         }
-    //     }
-    //     return true
-    // }
-    // console.log(isPrime(2));
-    // console.log(isPrime(3));
-    // console.log(isPrime(4));
-    // console.log(isPrime(17));
-
-
-    // =========================================================================================================
-
+// =========================================================================================================
 
 //     3) reverseStr(str) — stringni teskari qilish
 // Vazifa:
@@ -82,7 +72,6 @@
 // console.log(reverseStr("salom"));
 // console.log(reverseStr("abc"));
 // console.log(reverseStr(""));
-
 
 // =================================================================================================
 
@@ -149,7 +138,6 @@
 // console.log(findMax([-10, -3, -7]));
 // console.log(findMax([]));
 
-
 // =================================================================================================================
 
 // 6) To‘liq CRUD masala (bitta data bilan)
@@ -163,12 +151,8 @@
 // } S
 // iz students bilan ishlaydigan 4 ta asosiy CRUD function yozishingiz kerak
 
-
-
-
 // let students = [];
 // let nextId = 1;
-
 
 // function addStudent(name, age, score) {
 //   const student = {
@@ -181,7 +165,6 @@
 //   nextId++;
 //   return student;
 // }
-
 
 // function getStudents() {
 //   return students;
@@ -196,7 +179,6 @@
 //   return null;
 // }
 
-
 // function updateStudent(id, newData) {
 //   for (let i = 0; i < students.length; i++) {
 //     if (students[i].id === id) {
@@ -208,7 +190,6 @@
 //   }
 //   return null;
 // }
-
 
 // function deleteStudent(id) {
 //   for (let i = 0; i < students.length; i++) {
@@ -230,16 +211,13 @@
 
 // console.log(getStudentById(2))
 
-
 // updateStudent(1, { score: 95 });
 // console.log(getStudentById(1));
 
 // deleteStudent(2);
 // console.log(getStudents());
 
-
 // ===================================================================================================================
-
 
 // 6.1) CREATE — createStudent(name, age, score)
 // Vazifa:
@@ -252,7 +230,6 @@
 // // ○ array bo‘sh bo‘lsa id = 1
 // // ○ aks holda oxirgi element id + 1
 // // ● yangi student objectni arrayga qo‘shing va o‘sha objectni return qiling.
-
 
 // let students = [];
 
@@ -300,7 +277,6 @@
 // ● topilsa student objectni return qiling.
 // ● topilmasa null qaytaring.
 
-
 // function getStudentById (id){
 //     for ( let i = 0; i> students.length; i++){
 //         if (students[i].id === id){
@@ -312,4 +288,51 @@
 
 // console.log(getStudentById(1));
 
+// ===================================================================================================================
 
+// 6.3) UPDATE — updateStudent(id, data)
+// Vazifa:
+// id bo‘yicha student toping va data ichidagi qiymatlar bilan yangilang.
+// Shartlar:
+// ● data ichida quyidagilar kelishi mumkin: name, age, score
+// ● Faqat kelgan fieldlarni yangilang, qolganiga tegmang.
+// ● Agar student topilmasa "Student not found" qaytaring.
+// ● Yangilangan student objectni return qiling.
+// ● Update paytida ham validatsiya bo‘lsin:○ name bo‘sh bo‘lsa "Invalid name"
+// ○ age 5 dan kichik bo‘lsa "Invalid age"
+// ○ score 0..100 oralig‘ida bo‘lmasa "Invalid score"
+
+let students = [
+    { id: 1, name: "Ali", age: 20, score: 85 },
+    { id: 2, name: "Vali", age: 18, score: 70 },
+    { id: 3, name: "Guli", age: 22, score: 60 }
+];
+
+function updateStudent(id, data) {
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].id === id) {
+
+            if (data.name !== undefined) {
+                if (data.name === "") return "Invalid name";
+                students[i].name = data.name;
+            }
+
+            if (data.age !== undefined) {
+                if (data.age < 5) return "Invalid age";
+                students[i].age = data.age;
+            }
+
+            if (data.score !== undefined) {
+                if (data.score < 0 || data.score > 100) return "Invalid score";
+                students[i].score = data.score;
+            }
+
+            return students[i];
+        }
+    }
+    return "Student not found";
+}
+
+console.log(updateStudent(1, { name: "Sardor" })); 
+console.log(updateStudent(2, { score: 95 }));     
+console.log(updateStudent(3, { age: 10 }));        
