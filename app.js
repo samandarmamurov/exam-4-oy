@@ -69,18 +69,70 @@
 // ● reverseStr("abc") → "cba"
 // ● reverseStr("") → ""
 
-function reverseStr(str) {
-    let result = "";
+// function reverseStr(str) {
+//     let result = "";
 
-    for (let i = str.length - 1; i >= 0; i--) {
-        result += str[i];
-    }
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         result += str[i];
+//     }
 
-    return result;
+//     return result;
+// }
+
+// console.log(reverseStr("salom"));
+// console.log(reverseStr("abc"));
+// console.log(reverseStr(""));
+
+
+// =================================================================================================
+
+// 4) countVowels(str) — unlilar sonini topish
+// Vazifa:
+// countVowels(str) function yozing. U str qabul qiladi va string ichidagi unlilar (a, e, i,
+// o, u) sonini qaytarsin.
+// Shartlar:
+// ● Katta-kichik harflarni bir xil hisoblang (A ham a).
+// ● Unlilar faqat: a, e, i, o, u.
+// ● return son qaytarsin.
+// ● regex ishlatish mumkin, lekin ishlatmasangiz ham bo‘ladi.
+// Misollar:
+// ● countVowels("Salom") → 2 (a, o)
+// ● countVowels("JAVA") → 2 (A, A)● countVowels("bbb") → 0
+
+// function countVowels(str) {
+//     const vowels = "aeiou";
+//     let ozgaruvchi = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.includes(str[i].toLowerCase())) {
+//             ozgaruvchi++;
+//         }
+//     }
+
+//     return ozgaruvchi;
+// }
+
+// console.log(countVowels("Salom"));
+// console.log(countVowels("JAVA"));
+
+// =========================================================================================================
+
+// 5) findMax(arr) — eng katta sonni topish
+// Vazifa:
+// findMax(arr) function yozing. U arr (sonlardan iborat array) qabul qiladi va eng katta sonni
+// qaytarsin.
+// Shartlar:
+// ● Math.max() ishlatmang.
+// ● Array bo‘sh bo‘lsa null qaytaring.
+// ● arr ichida kamida bitta son bo‘lishi mumkin.
+// ● Loop bilan toping.
+// Misollar:
+// ● findMax([1, 5, 3]) → 5
+// ● findMax([-10, -3, -7]) → -3
+// ● findMax([]) → null
+
+function findMax(arr) {
+    if ()
 }
-
-console.log(reverseStr("salom"));
-console.log(reverseStr("abc"));
-console.log(reverseStr(""));
 
 
