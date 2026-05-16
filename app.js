@@ -69,14 +69,18 @@
 // ● reverseStr("abc") → "cba"
 // ● reverseStr("") → ""
 
-function reverseStr (str){
-    let result=""
-    for (let i = str.length - 1; i >= 0; )
-        result+= str
+function reverseStr(str) {
+    let result = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        result += str[i];
+    }
+
+    return result;
 }
 
 console.log(reverseStr("salom"));
-console.log( reverseStr("abc"));
-console.log( reverseStr(""));
+console.log(reverseStr("abc"));
+console.log(reverseStr(""));
 
 
