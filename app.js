@@ -131,25 +131,112 @@
 // ● findMax([-10, -3, -7]) → -3
 // ● findMax([]) → null
 
-function findMax(arr) {
-    if (arr.length === 0) return null;
+// function findMax(arr) {
+//     if (arr.length === 0) return null;
 
-    let max = arr[0];
+//     let max = arr[0];
 
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
 
-    return max;
-}
+//     return max;
+// }
 
-console.log(findMax([1, 5, 3]));
-console.log(findMax([-10, -3, -7]));
-console.log(findMax([]));
-
-
+// console.log(findMax([1, 5, 3]));
+// console.log(findMax([-10, -3, -7]));
+// console.log(findMax([]));
 
 
+// =================================================================================================================
+
+// 6) To‘liq CRUD masala (bitta data bilan)
+// “Student Manager” (DOMsiz CRUD)
+// Sizda students degan array bor. Har bir student quyidagi ko‘rinishda bo‘ladi:
+// {
+// id: 1,
+// name: "Ali",
+// age: 16,
+// score: 85
+// } S
+// iz students bilan ishlaydigan 4 ta asosiy CRUD function yozishingiz kerak
+
+
+
+
+// let students = [];
+// let nextId = 1;
+
+
+// function addStudent(name, age, score) {
+//   const student = {
+//     id: nextId,
+//     name: name,
+//     age: age,
+//     score: score
+//   };
+//   students.push(student);
+//   nextId++;
+//   return student;
+// }
+
+
+// function getStudents() {
+//   return students;
+// }
+
+// function getStudentById(id) {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i].id === id) {
+//       return students[i];
+//     }
+//   }
+//   return null;
+// }
+
+
+// function updateStudent(id, newData) {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i].id === id) {
+//       if (newData.name !== undefined)  students[i].name  = newData.name;
+//       if (newData.age !== undefined)   students[i].age   = newData.age;
+//       if (newData.score !== undefined) students[i].score = newData.score;
+//       return students[i];
+//     }
+//   }
+//   return null;
+// }
+
+
+// function deleteStudent(id) {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i].id === id) {
+//       students.splice(i, 1);
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// // CREATE
+// addStudent("Ali", 16, 85);
+// addStudent("Vali", 17, 90);
+// addStudent("Sardor", 15, 78);
+
+// // READ
+// console.log(getStudents());
+
+// console.log(getStudentById(2))
+
+
+// updateStudent(1, { score: 95 });
+// console.log(getStudentById(1));
+
+// deleteStudent(2);
+// console.log(getStudents());
+
+
+// ===================================================================================================================
 
