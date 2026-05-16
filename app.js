@@ -290,3 +290,26 @@
 // console.log(createStudent("Ali", 15, 90));
 // console.log(createStudent("Vali", 14, 80));
 // console.log(students);
+
+// =======================================================================================================================
+
+// 6.2) READ — getStudentById(id)
+// Vazifa:
+// id bo‘yicha studentni topib qaytaring.
+// Shartlar:
+// ● topilsa student objectni return qiling.
+// ● topilmasa null qaytaring.
+
+
+// function getStudentById (id){
+//     for ( let i = 0; i> students.length; i++){
+//         if (students[i].id === id){
+//             return students[i]
+//         }
+//     }
+//     return null
+// }
+
+// console.log(getStudentById(1));
+
+
